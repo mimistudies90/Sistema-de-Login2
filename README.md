@@ -48,7 +48,7 @@ Clone o repositório:
 bash
 Copiar
 Editar
-git clone https://github.com/seuusuario/Sistema_Login.git
+git clone https://github.com/mimistudies90/Sistema-de-Login2.git
 Importe o banco de dados:
 
 Use o phpMyAdmin ou o MySQL para importar o arquivo sistema_login.sql.
