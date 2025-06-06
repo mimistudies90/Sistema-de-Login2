@@ -2,7 +2,7 @@
 1. Introdução
 Nome do Projeto: Sistema_Login
 
-Descrição:
+## 1 Introdução
 O Sistema_Login é uma aplicação simples desenvolvida em PHP com MySQL que permite autenticação de usuários. Ele serve como base para sistemas maiores, garantindo que apenas usuários cadastrados possam acessar áreas protegidas do sistema.
 
 Tecnologias Utilizadas:
@@ -13,6 +13,8 @@ Responsável: Paula Maria da Rocha Celidorio
 
 Data de Início:
 06/06/2025
+
+## 2 Estrutura do Projeto
 
 LOGIN/
 ├── config/
@@ -33,7 +35,14 @@ LOGIN/
 │
 └── README.md                 # Documentação do projeto
 
-3. Como Executar o Projeto
+## 3 Configuração do Ambiente ### **Requisitos**
+    • Servidor XAMP
+    • Visual Studio Code[1.98.2]
+    • MySQL  Workbench[8.0.36]
+    • Sistema operacinal: Windows 11;
+    ### **Instalação**
+    
+# 4 Como Executar o Projeto
 Clone o repositório:
 
 bash
@@ -58,3 +67,19 @@ private $password = '';
 Acesse o sistema:
 
 Execute o servidor local (como XAMPP) e acesse http://localhost/Sistema_Login/public/login.php.
+
+## 4 Estrutura do Banco de Dados 
+
+  CREATE DATABASE sistema_login;
+USE sistema_login;
+-- Cria a tabela de usuários
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+-- Insere um usuário de exemplo (senha = 'senha123')
+INSERT INTO usuarios (email, senha_hash) 
+VALUES ('usuario@exemplo.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+ 
